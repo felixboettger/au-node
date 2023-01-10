@@ -15,6 +15,6 @@ app.post("/getAUs", (req, res) => {
   auDetection.getLandmarksAUs(base64image, res);
 });
 
-server = app.listen(3000, function () {
+server = app.listen(3000, "0.0.0.0", function () {
   console.log("Server started on Port: " + 3000);
 });
