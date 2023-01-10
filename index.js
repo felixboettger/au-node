@@ -10,7 +10,6 @@ app.get("/test", (req, res) => {
 });
 
 app.post("/getAUs", (req, res) => {
-  console.log(req.body);
   base64image = req.body.image;
   auDetection.getLandmarksAUs(base64image, res);
 });
