@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const auDetection = require("./au-detection.js");
 const app = express();
 
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: "100mb" }));
 
 app.get("/test", (req, res) => {
   res.send("Working!");
