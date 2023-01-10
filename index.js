@@ -4,6 +4,11 @@ const auDetection = require("./au-detection.js");
 const app = express();
 
 app.use(bodyParser.json());
+
+app.get("/test", (req, res) => {
+  res.send("Working!");
+});
+
 app.post("/getAUs", (req, res) => {
   console.log(req.body);
   base64image = req.body.image;
